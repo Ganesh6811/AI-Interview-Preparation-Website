@@ -7,11 +7,8 @@ import baseUrl from "../config";
 import Vapi from '@vapi-ai/web';
 import useAuthStore from "../store/Auth.store.jsx";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import dotenv from "dotenv";
 
 const Interview = () => {
-    dotenv.config();
-
     const { id } = useParams();
     const [isStarted, setIsStarted] = useState(false);
     const [isSpeechStarted, setIsSpeechStarted] = useState(false);
