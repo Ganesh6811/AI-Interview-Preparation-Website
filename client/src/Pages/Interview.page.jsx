@@ -38,7 +38,7 @@ const Interview = () => {
 
     const startInterview = async () => {
         const questionsList = questions.map((q, index) => `${index + 1}. ${q}`).join("\n");
-        callRef.current = new Vapi(process.env.VAPI_API_KEY); // ✅ Use ref
+        callRef.current = new Vapi(process.env.REACT_APP_VAPI_API_KEY); // ✅ Use ref
 
         const assistantOverrides = {
             transcriber: {
@@ -68,7 +68,7 @@ const Interview = () => {
             firstMessageMode: "assistant-speaks-first",
         };
 
-        await callRef.current.start(process.env.VAPI_ASSISTANT_ID, assistantOverrides); // ✅ Use ref
+        await callRef.current.start(process.env.REACT_APP_VAPI_ASSISTANT_ID, assistantOverrides); // ✅ Use ref
 
         callRef.current.on("speech-start", ()=>{
             setIsSpeechStarted(true);
