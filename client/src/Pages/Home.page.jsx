@@ -6,9 +6,9 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import baseUrl from '../config';
 import useAuthStore from '../store/Auth.store.jsx';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'; 
 
-const Home = () => {
+const Home = () => { 
     const [showPopup, setShowPopup] = useState(false);
     const [role, setRole] = useState("");
     const [type, setType] = useState("");

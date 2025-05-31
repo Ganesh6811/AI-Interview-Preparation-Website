@@ -7,8 +7,11 @@ import baseUrl from "../config";
 import Vapi from '@vapi-ai/web';
 import useAuthStore from "../store/Auth.store.jsx";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import dotenv from "dotenv";
 
 const Interview = () => {
+    dotenv.config();
+
     const { id } = useParams();
     const [isStarted, setIsStarted] = useState(false);
     const [isSpeechStarted, setIsSpeechStarted] = useState(false);
@@ -35,7 +38,7 @@ const Interview = () => {
 
     const startInterview = async () => {
         const questionsList = questions.map((q, index) => `${index + 1}. ${q}`).join("\n");
-        callRef.current = new Vapi("598d9687-8ee8-4058-a19e-feb3aa0b7126"); // ✅ Use ref
+        callRef.current = new Vapi(process.env.VAPI_API_KEY); // ✅ Use ref
 
         const assistantOverrides = {
             transcriber: {
@@ -65,7 +68,7 @@ const Interview = () => {
             firstMessageMode: "assistant-speaks-first",
         };
 
-        await callRef.current.start("89b55c5e-2a6a-428d-9904-5018135d6f21", assistantOverrides); // ✅ Use ref
+        await callRef.current.start(process.env.VAPI_ASSISTANT_ID, assistantOverrides); // ✅ Use ref
 
         callRef.current.on("speech-start", ()=>{
             setIsSpeechStarted(true);
