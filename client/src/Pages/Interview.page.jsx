@@ -107,6 +107,7 @@ const Interview = () => {
             }
         } catch (err) {
             console.log("Error in the interview page:", err);
+            navigate("/");
         }
 
         navigate(`/interviewDetails/${id}`);
