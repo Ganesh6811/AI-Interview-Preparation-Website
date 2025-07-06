@@ -4,6 +4,13 @@ A powerful and interactive AI-driven interview preparation platform that simulat
 
 🌐 Live Demo: [https://ai-interview-preparation-website.onrender.com](https://ai-interview-preparation-website.onrender.com)
 
+🔐 **Credentials**:
+
+Use the following credentials to try the app:
+
+- **Email**: `test02@gmail.com`
+- **Password**: `test02`
+
 ---
 
 ## 🚀 Features
