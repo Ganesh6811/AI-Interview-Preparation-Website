@@ -50,7 +50,7 @@ const Home = () => {
         try {
             const seperatedStack = teckstack.split(",").map((str) => str.trim());
             console.log("seperated data:", seperatedStack);
-            const res = axios.post(`${baseUrl}/interview/sendInterviewDetails`, {
+            const res = await axios.post(`${baseUrl}/interview/sendInterviewDetails`, {
                 role,
                 type,
                 amount,
