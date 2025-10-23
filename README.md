@@ -48,12 +48,12 @@ Use the following credentials to try the app:
 git clone https://github.com/Ganesh6811/AI-Interview-Preparation-Website.git
 cd ai-interview-preparation-website
 
-cd backend
+cd Server
 npm install
 # Create .env file with your MongoDB URI, Gemini API Key, Vapi credentials, etc.
 npm start
 
 
-cd frontend
+cd client
 npm install
 npm start
