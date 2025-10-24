@@ -16,7 +16,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(cors({
-    origin: "https://ai-interview-preparation-website.onrender.com", 
+    origin: "https://ai-interview-preparation-website.vercel.app", 
     credentials: true,  
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],   
     allowedHeaders: ["Content-Type", "Authorization"],  
