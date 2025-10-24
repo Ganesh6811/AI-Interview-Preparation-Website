@@ -1,3 +1,3 @@
-const baseUrl = "https://ai-interview-preparation-website-backend.onrender.com";
+const baseUrl = "https://ai-interview-preparation-backend.vercel.app";
 
 export default baseUrl;
